@@ -1,3 +1,4 @@
+import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import BottomTabsNavigation from './src/router/bottomTabsNavigation';
 

@@ -25,63 +25,62 @@ const TabNavigation = createBottomTabNavigator();
 const {HOMESCREEN, PROFILESCREEN, SEARCHSCREEN, REELSCREEN, SHOPSCREEN} =
   SCREENS;
 
-  const BottomTabsNavigation = () => {
-    return (
-      <TabNavigation.Navigator screenOptions={{headerShown: false}}>
-        <TabNavigation.Screen
-          options={{
-            tabBarIcon: ({focused}) =>
-              focused ? <HomeField size={30} /> : <Home size={30} />,
-          }}
-          name={HOMESCREEN}
-          component={HomeScreen}
-        />
-        <TabNavigation.Screen
-          options={{
-            tabBarIcon: ({focused}) =>
-              focused ? <SearchField size={30} /> : <Search size={30} />,
-          }}
-          name={SEARCHSCREEN}
-          component={SearchScreen}
-        />
-        <TabNavigation.Screen
-          options={{
-            tabBarIcon: ({focused}) =>
-              focused ? <ReelField size={30} /> : <Reel size={30} />,
-          }}
-          name={REELSCREEN}
-          component={ReelScreen}
-        />
-        <TabNavigation.Screen
-          options={{
-            tabBarIcon: ({focused}) =>
-              focused ? <ShopField size={30} /> : <Shop size={30} />,
-          }}
-          name={SHOPSCREEN}
-          component={ShopScreen}
-        />
-        <TabNavigation.Screen
-          options={{
-            tabBarIcon:( {focused}) => (
-              <Image
-                style={styles.avatar}
-                source={require('../assets/profile.png')}
-              />
-            ),
-          }}
-          name={PROFILESCREEN}
-          component={ProfileScreen}
-        />
-      </TabNavigation.Navigator>
-    );
-  };
-  export default BottomTabsNavigation;
-  const styles = StyleSheet.create({
-    avatar: {
-      width: 30,
-      height: 30,
-      borderWidth: 1,
-      borderRadius: 25,
-    },
-  });
-  
+const BottomTabsNavigation = () => {
+  return (
+    <TabNavigation.Navigator screenOptions={{headerShown: false}}>
+      <TabNavigation.Screen
+        options={{
+          tabBarIcon: ({focused}) =>
+            focused ? <HomeField size={30} /> : <Home size={30} />,
+        }}
+        name={HOMESCREEN}
+        component={HomeScreen}
+      />
+      <TabNavigation.Screen
+        options={{
+          tabBarIcon: ({focused}) =>
+            focused ? <SearchField size={30} /> : <Search size={30} />,
+        }}
+        name={SEARCHSCREEN}
+        component={SearchScreen}
+      />
+      <TabNavigation.Screen
+        options={{
+          tabBarIcon: ({focused}) =>
+            focused ? <ReelField size={30} /> : <Reel size={30} />,
+        }}
+        name={REELSCREEN}
+        component={ReelScreen}
+      />
+      <TabNavigation.Screen
+        options={{
+          tabBarIcon: ({focused}) =>
+            focused ? <ShopField size={30} /> : <Shop size={30} />,
+        }}
+        name={SHOPSCREEN}
+        component={ShopScreen}
+      />
+      <TabNavigation.Screen
+        options={{
+          tabBarIcon: ({focused}) => (
+            <Image
+              style={styles.avatar}
+              source={require('../assets/profile.png')}
+            />
+          ),
+        }}
+        name={PROFILESCREEN}
+        component={ProfileScreen}
+      />
+    </TabNavigation.Navigator>
+  );
+};
+export default BottomTabsNavigation;
+const styles = StyleSheet.create({
+  avatar: {
+    width: 30,
+    height: 30,
+    borderWidth: 1,
+    borderRadius: 25,
+  },
+});

@@ -1,3 +1,4 @@
+import React from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {Logo, Plus, Heart, Messenger} from '../../utils/Icons';
 import {COLORS} from '../../theme/color';
@@ -11,14 +12,14 @@ const Header = () => {
 
       <View style={styles.actions}>
         <TouchableOpacity activeOpacity={0.6}>
-          <View style={styles.dotConteiner}>
+          <View style={styles.dotContainer}>
             <View style={styles.dot} />
           </View>
           <Heart size={24} />
         </TouchableOpacity>
 
         <TouchableOpacity activeOpacity={0.6}>
-          <View style={styles.dotConteiner}>
+          <View style={styles.dotContainer}>
             <View style={styles.dot} />
           </View>
           <Messenger size={24} />
@@ -47,7 +48,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 30,
   },
-  dotConteiner: {
+  dotContainer: {
     position: 'absolute',
     right: 0,
     top: 0,

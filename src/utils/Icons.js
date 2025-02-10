@@ -104,6 +104,42 @@ const Messenger = ({size}) => {
   );
 };
 
+const Dots = () => {
+  return (
+    <Image
+      style={{width: 15, height: 3}}
+      source={require('../assets/more.png')}
+    />
+  );
+};
+
+const Bookmark = () => {
+  return (
+    <Image
+      style={{width: 24, height: 24}}
+      source={require('../assets/bookmark.png')}
+    />
+  );
+};
+
+const Comment = () => {
+  return (
+    <Image
+      style={{width: 24, height: 24}}
+      source={require('../assets/comment.png')}
+    />
+  );
+};
+
+const Share = () => {
+  return (
+    <Image
+      style={{width: 24, height: 24}}
+      source={require('../assets/share.png')}
+    />
+  );
+};
+
 export {
   Logo,
   Home,
@@ -117,4 +153,8 @@ export {
   Plus,
   Heart,
   Messenger,
+  Dots,
+  Bookmark,
+  Comment,
+  Share,
 };

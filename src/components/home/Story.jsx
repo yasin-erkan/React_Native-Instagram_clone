@@ -1,5 +1,6 @@
 import {StyleSheet, View, Image, Text} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import React from 'react';
 
 const Story = ({story}) => {
   return (
