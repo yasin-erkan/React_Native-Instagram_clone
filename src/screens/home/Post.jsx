@@ -50,6 +50,18 @@ const Post = ({post}) => {
           <Text> {post.description} </Text>
         </ReadMore>
       </View>
+      <View>
+        {post.comments > 0 && (
+          <TouchableOpacity style={{paddingBottom: 7}} activeOpacity={0.5}>
+            <Text style={styles.comments}>{post.comments} comments</Text>
+          </TouchableOpacity>
+        )}
+        ;
+        <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <Text style={styles.date}>{post.date}</Text>
+          <Text style={styles.translation}>See Translation</Text>
+        </View>
+      </View>
     </View>
   );
 };
@@ -111,5 +123,21 @@ const styles = StyleSheet.create({
     marginTop: 5,
     color: '#33',
     fontWeight: '700',
+  },
+  comments: {
+    marginTop: 15,
+    opacity: 0.7,
+    fontWeight: '500',
+    marginLeft: 5,
+  },
+
+  translation: {
+    fontSize: 13,
+    fontWeight: '500',
+    marginTop: 6,
+  },
+  date: {
+    fontSize: 14,
+    opacity: 0.5,
   },
 });
