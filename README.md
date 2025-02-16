@@ -2,7 +2,11 @@
 
 A simple **React Native Instagram clone** that mimics the core features of Instagram, including the home feed, profile page, top bar, and bottom navigation bar.
 
+![App Preview](instafgram-clone.gif)
+
+
 ## Features
+
 
 - **Home Feed**: Scrollable feed with posts, images, captions, and likes.
 - **Profile Page**: View user profile, profile picture, and posts.
