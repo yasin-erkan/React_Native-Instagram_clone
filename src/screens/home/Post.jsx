@@ -53,7 +53,10 @@ const Post = ({post}) => {
           </Text>
         </ReadMore>
       </View>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5acd95415db99891ab54b01d2406d834fadcf7e4
       <View>
         {post.comments > 0 && (
           <TouchableOpacity style={{paddingBottom: 7}} activeOpacity={0.5}>
@@ -61,6 +64,7 @@ const Post = ({post}) => {
           </TouchableOpacity>
         )}
         ;
+<<<<<<< HEAD
         <View
           // eslint-disable-next-line react-native/no-inline-styles
           style={{
@@ -72,6 +76,11 @@ const Post = ({post}) => {
           <TouchableOpacity>
             <Text style={styles.translation}>See translation</Text>
           </TouchableOpacity>
+=======
+        <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <Text style={styles.date}>{post.date}</Text>
+          <Text style={styles.translation}>See Translation</Text>
+>>>>>>> 5acd95415db99891ab54b01d2406d834fadcf7e4
         </View>
       </View>
     </View>
@@ -138,7 +147,11 @@ const styles = StyleSheet.create({
   },
   comments: {
     marginTop: 15,
+<<<<<<< HEAD
     opacity: 0.9,
+=======
+    opacity: 0.7,
+>>>>>>> 5acd95415db99891ab54b01d2406d834fadcf7e4
     fontWeight: '500',
     marginLeft: 5,
   },
@@ -151,6 +164,9 @@ const styles = StyleSheet.create({
   date: {
     fontSize: 14,
     opacity: 0.5,
+<<<<<<< HEAD
     marginLeft: 5,
+=======
+>>>>>>> 5acd95415db99891ab54b01d2406d834fadcf7e4
   },
 });
