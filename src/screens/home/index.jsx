@@ -5,17 +5,16 @@ import Stories from '../../components/home/Stories';
 import Post from './Post';
 import posts from '../../utils/post';
 
-
 const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <Header/>
+      <Header />
       <Stories />
       <ScrollView>
-  {posts.map((post) => (
-    <Post key={post.id} post={post} />
-  ))}
-</ScrollView>
+        {posts.map(post => (
+          <Post key={post.id} post={post} />
+        ))}
+      </ScrollView>
     </SafeAreaView>
   );
 };

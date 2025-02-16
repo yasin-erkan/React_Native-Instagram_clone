@@ -65,7 +65,7 @@ const BottomTabsNavigation = () => {
           tabBarIcon: ({focused}) => (
             <Image
               style={styles.avatar}
-              source={require('../assets/profile.png')}
+              source={{uri: 'https://randomuser.me/api/portraits/men/1.jpg'}}
             />
           ),
         }}

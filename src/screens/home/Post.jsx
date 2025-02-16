@@ -41,15 +41,19 @@ const Post = ({post}) => {
 
       <View style={{flex: 1, marginHorizontal: 5}}>
         <Text style={styles.user}> {post?.user.name}</Text>
+
         <ReadMore
           numberOfLines={2}
           seeLessStyle={{color: '#999'}}
           seeLessText="see less"
           seeMoreText="see more"
           seeMoreStyle={{color: '#999'}}>
-          <Text> {post.description} </Text>
+          <Text>
+            {post.description ? post.description : 'No description available'}
+          </Text>
         </ReadMore>
       </View>
+
       <View>
         {post.comments > 0 && (
           <TouchableOpacity style={{paddingBottom: 7}} activeOpacity={0.5}>
@@ -57,9 +61,17 @@ const Post = ({post}) => {
           </TouchableOpacity>
         )}
         ;
-        <View style={{flexDirection: 'row', alignItems: 'center'}}>
+        <View
+          // eslint-disable-next-line react-native/no-inline-styles
+          style={{
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            marginLeft: 5,
+          }}>
           <Text style={styles.date}>{post.date}</Text>
-          <Text style={styles.translation}>See Translation</Text>
+          <TouchableOpacity>
+            <Text style={styles.translation}>See translation</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
@@ -126,7 +138,7 @@ const styles = StyleSheet.create({
   },
   comments: {
     marginTop: 15,
-    opacity: 0.7,
+    opacity: 0.9,
     fontWeight: '500',
     marginLeft: 5,
   },
@@ -139,5 +151,6 @@ const styles = StyleSheet.create({
   date: {
     fontSize: 14,
     opacity: 0.5,
+    marginLeft: 5,
   },
 });
